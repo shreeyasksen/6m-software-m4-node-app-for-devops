@@ -30,7 +30,7 @@ test:
       optional_publish:
       ##Assignment
 
-workflows:
+simple_workflows:
   simple_workflow:
     jobs:
       - build
