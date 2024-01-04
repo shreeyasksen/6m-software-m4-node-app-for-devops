@@ -6,7 +6,7 @@ orbs:
   heroku: circleci/heroku@2.0.0
 
 jobs:
-    build:
+  build:
     docker:
       - image: cimg/node:16.10
     steps:
@@ -16,7 +16,6 @@ jobs:
       - run: | 
           echo "Installing dependencies..."
           npm install  
-
 
   test:
     docker:
@@ -30,8 +29,7 @@ jobs:
           npm test
   
 
-
-    publish:
+  publish:
     executor: docker/docker
     steps:
       - setup_remote_docker
@@ -43,9 +41,6 @@ jobs:
       - docker/push:
           image: shreeya42001/education-space
           tag: v1.0.1
-
-
-
 
   deploy:
     docker:
