@@ -28,11 +28,10 @@ jobs:
       - run: |
           echo "Running tests..."
           npm test
-  optional_publish:
-        ##Assignment
+  
 
 
-        publish:
+    publish:
     executor: docker/docker
     steps:
       - setup_remote_docker
