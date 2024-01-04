@@ -32,7 +32,7 @@ jobs:
 
 
 
-        deploy:
+  deploy:
     docker:
       - image: cimg/node:16.10
     steps:
@@ -43,8 +43,8 @@ jobs:
           name: Heroku Container Push
           command: |
               heroku container:login
-              heroku container:push web -a chinhow-su-devops
-              heroku container:release web -a chinhow-su-devops
+              heroku container:push web -a shreeyasen-su-devops
+              heroku container:release web -a shreeyasen-su-devops
 
 workflows:
   simple_workflow:
@@ -56,14 +56,6 @@ workflows:
       - deploy:
           requires:
             - test
-
-workflows:
-  simple_workflow:
-    jobs:
-      - build
-      - test:
-          requires:
-            - build
 
 
 
