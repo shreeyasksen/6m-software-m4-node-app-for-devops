@@ -6,7 +6,7 @@ orbs:
   heroku: circleci/heroku@2.0.0
 
 jobs:
-  build:
+    build:
     docker:
       - image: cimg/node:16.10
     steps:
