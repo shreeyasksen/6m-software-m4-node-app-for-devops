@@ -4,6 +4,7 @@ orbs:
   node: circleci/node@5.0.1
   docker: circleci/docker@2.1.4
 
+
 jobs:
   build:
     docker:
@@ -43,7 +44,6 @@ jobs:
 
   
 workflows:
-  version: 2
   simple_workflow:
     jobs:
       - build:
