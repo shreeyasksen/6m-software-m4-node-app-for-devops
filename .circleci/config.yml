@@ -43,14 +43,20 @@ jobs:
 
   
 workflows:
+  version: 2
   simple_workflow:
     jobs:
-      - build
+      - build:
+          name: build
       - test:
           requires:
             - build
       - publish:
           requires:
             - test
+      - deploy:
+          requires:
+            - publish
+
             
       
