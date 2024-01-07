@@ -46,8 +46,7 @@ jobs:
 workflows:
   simple_workflow:
     jobs:
-      - build:
-          name: build
+      - build
       - test:
           requires:
             - build
