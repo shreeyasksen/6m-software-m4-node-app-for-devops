@@ -82,7 +82,7 @@ jobs:
   
 
 
-  workflows:
+workflows:
   simple_workflow:
     jobs:
       - build
