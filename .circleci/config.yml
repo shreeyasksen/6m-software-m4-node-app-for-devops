@@ -79,6 +79,9 @@ jobs:
               docker push registry.heroku.com/shreeyasen-su-devops/web
               # format --- docker push registry.heroku.com/<app-name>/web
               heroku container:release web -a shreeyasen-su-devops
+  
+
+
   workflows:
   simple_workflow:
     jobs:
@@ -91,9 +94,4 @@ jobs:
             - test
       - publish:
           requires:
-            - scan
-    
-
-
-            
-      
+            - scan     
